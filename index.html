@@ -26,15 +26,19 @@
             <li>
                 <a>Stations</a>
             </li>
-            <li id="statsText">
+            <li id="statsText" style="text-align: right; font-weight: bold">
                 <p id="money" style="color:black;">
-                    <b>Money: $0</b>
+                    Money: $0
                 </p>
+                <p id="moneyPerQuarter" style="color:black;">
+                        Money Per Quarter: $100
+                    </p>
             </li>
         </ul>
     </div>
 
     <div class="main">
+
         <!-- Control Bar -->
         <div>
             <ul class="buttonBar" style="margin-bottom: 50px;">
@@ -84,6 +88,17 @@
             <div class="planet-tab" id="planet-poloki">
                 <h1>Poloki</h1>
                 <h4>This planet has great trees.</h4>
+                <div>
+                    <ul class="buttonBar">
+                        <li>
+                            <button class="small-button cost-button" onclick="newTreeFarm()" cost="500">Build New Tree Farm - 500$</button>
+                        </li>
+                        <li>
+                            <button class="small-button cost-button" onclick="newWoodShop()" cost="1500">Build a Woodshop - 1500$</button>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
 
