@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spacemine</title>
+    <meta name="description" content="Spacemine">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/util.js"></script>
+    <script src="js/home.js"></script>
+</head>
+
+<body onload="init()">
+    <div class="navbar">
+        <ul>
+            <li>
+                <a>Home</a>
+            </li>
+            <li>
+                <a>Ships</a>
+            </li>
+            <li>
+                <a>Planets</a>
+            </li>
+            <li>
+                <a>Stations</a>
+            </li>
+            <li id="statsText">
+                <p id="money" style="color:black;">
+                    <b>Money: $0</b>
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <p>Some text some text some text some text..</p>
+
+        <ul class="buttonBar">
+            <li>
+                <button>Quit</button>
+            </li>
+            <li>
+                <button>Save</button>
+            </li>
+            <li>
+                <button onclick="gotoNextQuarter()">Next Quarter</button>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

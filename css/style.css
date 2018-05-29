@@ -1,0 +1,57 @@
+body{
+    background: black;
+    margin-left: 0px;
+    margin-top:100px;
+}
+
+p{
+    color:white;
+}
+
+.miniWindowTitle{
+    text-align: center;
+    font-size: 45px;
+    color:rgb(212, 212, 212);
+}
+
+.miniWindowBody{
+    margin-top:10px;
+    margin-left:25px;
+    margin-right: 25px;
+    margin-bottom:10px;
+}
+
+.main{
+    margin: 3%;
+}
+
+.buttonBar{
+    background-color: rgb(163, 163, 163);
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.buttonBar li{
+    display: block;
+    margin: 0px 0px;
+    float: left;
+}
+
+.buttonBar button{
+    background-color: #f44336;
+    border: white;
+    color:white;
+    padding: 0px 20px;
+    line-height: 0;
+    height: 45px;
+    font-size: 20px;
+}
+
+.buttonBar button:hover {
+    background-color: rgb(185, 27, 27);
+}
+
+#financeList h3{
+    font-size: 25px;
+}
