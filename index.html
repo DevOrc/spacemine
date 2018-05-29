@@ -17,11 +17,12 @@
                 <a>Home</a>
             </li>
             <li>
-                <a>Ships</a>
-            </li>
-            <li>
                 <a>Planets</a>
             </li>
+            <li>
+                <a>Ships</a>
+            </li>
+
             <li>
                 <a>Stations</a>
             </li>
@@ -34,19 +35,59 @@
     </div>
 
     <div class="main">
-        <p>Some text some text some text some text..</p>
+        <!-- Control Bar -->
+        <div>
+            <ul class="buttonBar" style="margin-bottom: 50px;">
+                <li>
+                    <button>Quit</button>
+                </li>
+                <li>
+                    <button>Save</button>
+                </li>
+                <li>
+                    <button onclick="gotoNextQuarter()">Next Quarter</button>
+                </li>
+            </ul>
+        </div>
 
-        <ul class="buttonBar">
-            <li>
-                <button>Quit</button>
-            </li>
-            <li>
-                <button>Save</button>
-            </li>
-            <li>
-                <button onclick="gotoNextQuarter()">Next Quarter</button>
-            </li>
-        </ul>
+        <!-- Planets -->
+        <div>
+            <div style="line-height: 5px">
+                <h1>Planets</h1>
+                <hr>
+            </div>
+
+            <!-- Planet Selection Bar -->
+            <div>
+                <ul class="buttonBar">
+                    <li>
+                        <button onclick="openPlanetTab('planet-mercius')">Mercius</button>
+                    </li>
+                    <li>
+                        <button onclick="openPlanetTab('planet-coyto')">Coyto</button>
+                    </li>
+                    <li>
+                        <button onclick="openPlanetTab('planet-poloki')">Poloki</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Planet tabs -->
+            <div class="planet-tab" id="planet-mercius" style="display: block">
+                <h1>Mercius</h1>
+                <h4>A very, very, very cold planet.</h4>
+            </div>
+            <div class="planet-tab" id="planet-coyto">
+                <h1>Coyto</h1>
+                <h4>The most mediocre planet every seen.</h4>
+            </div>
+            <div class="planet-tab" id="planet-poloki">
+                <h1>Poloki</h1>
+                <h4>This planet has great trees.</h4>
+            </div>
+        </div>
+
+    </div>
     </div>
 </body>
 

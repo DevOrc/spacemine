@@ -7,6 +7,18 @@ function gotoNextQuarter(){
     gainMoney(100);
 }
 
+function openPlanetTab(name){
+    console.log("Opening planet tab: " + name);
+
+    //Close all of the planet tabs
+    tabs = document.getElementsByClassName("planet-tab");
+    for (i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+    }
+
+    document.getElementById(name).style.display = "block";
+}
+
 // Money
 
 var money = 0;

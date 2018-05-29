@@ -4,7 +4,7 @@ body{
     margin-top:100px;
 }
 
-p{
+p, h1, h2, h3, h4, h5, h6{
     color:white;
 }
 
@@ -26,21 +26,22 @@ p{
 }
 
 .buttonBar{
-    background-color: rgb(163, 163, 163);
     padding: 0px;
     margin: 0px;
     list-style-type: none;
+    height: 50px;
 }
 
 .buttonBar li{
-    display: block;
     margin: 0px 0px;
+    height: 50px;
     float: left;
 }
 
 .buttonBar button{
     background-color: #f44336;
     border: white;
+    display: block;
     color:white;
     padding: 0px 20px;
     line-height: 0;
@@ -54,4 +55,10 @@ p{
 
 #financeList h3{
     font-size: 25px;
+}
+
+.planet-tab{
+    background-color:rgb(54, 53, 53);
+    padding: 15px;
+    display: none;
 }
