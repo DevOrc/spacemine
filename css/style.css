@@ -53,6 +53,20 @@ button:hover:not(:disabled) {
     background-color: rgb(185, 27, 27);
 }
 
+.info-box{
+    background-color: #851a13;
+    border: rgb(100, 100, 100);
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    width: 250px;
+    margin:5px;
+}
+
+.info-box h1{
+    text-align: center;
+}
+
 #financeList h3{
     font-size: 25px;
 }
