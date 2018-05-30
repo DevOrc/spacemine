@@ -18,19 +18,6 @@ button:disabled{
     background-color: #7e170f;
 }
 
-.miniWindowTitle{
-    text-align: center;
-    font-size: 45px;
-    color:rgb(212, 212, 212);
-}
-
-.miniWindowBody{
-    margin-top:10px;
-    margin-left:25px;
-    margin-right: 25px;
-    margin-bottom:10px;
-}
-
 .main{
     margin: 3%;
 }
