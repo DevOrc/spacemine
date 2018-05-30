@@ -2,7 +2,7 @@ function init(){
     console.log("Javascript initialized!");
 
     updateCostButtons();
-    setInterval(gotoNextQuarter(false), 5000);
+    setInterval(gotoNextQuarter, 5000);
 }
 
 function updateCostButtons(){
@@ -62,7 +62,7 @@ function addMoneyPerQuarter(amount){
     document.getElementById("moneyPerQuarter").innerHTML = "Money Per Quarter: $" + moneyPerQuarter;
 }
 
-function gotoNextQuarter(shouldOpen){
+function gotoNextQuarter(){
     gainMoney(moneyPerQuarter);
 }
 
