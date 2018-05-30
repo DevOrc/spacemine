@@ -4,13 +4,130 @@
 <head>
     <title>Spacemine</title>
     <meta name="description" content="Spacemine">
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/util.js"></script>
+    <script src="js/home.js"></script>
 </head>
 
 <body onload="init()">
-    <canvas id="canvas" width="0" height="0">
-        Your browser does not support the HTML5 canvas tag.
-    </canvas>
+    <div class="navbar">
+        <ul>
+            <li>
+                <a>Home</a>
+            </li>
+            <li>
+                <a>Planets</a>
+            </li>
+            <li>
+                <a>Ships</a>
+            </li>
+
+            <li>
+                <a>Stations</a>
+            </li>
+            <li id="statsText" style="text-align: right; font-weight: bold">
+                <p id="money" style="color:black;">
+                    Money: $0
+                </p>
+                <p id="moneyPerQuarter" style="color:black;">
+                    Money Per Quarter: $100
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <!-- Control Bar -->
+        <div>
+            <ul class="buttonBar" style="margin-bottom: 50px;">
+                <li>
+                    <button>Quit</button>
+                </li>
+                <li>
+                    <button>Save</button>
+                </li>
+                <li>
+                    <button onclick="gotoNextQuarter()">Next Quarter</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Planets -->
+        <div>
+            <div style="line-height: 5px">
+                <h1>Planets</h1>
+                <hr>
+            </div>
+
+            <!-- Planet Selection Bar -->
+            <div>
+                <ul class="buttonBar">
+                    <li>
+                        <button onclick="openPlanetTab('planet-mercius')">Mercius</button>
+                    </li>
+                    <li>
+                        <button onclick="openPlanetTab('planet-coyto')">Coyto</button>
+                    </li>
+                    <li>
+                        <button onclick="openPlanetTab('planet-poloki')">Poloki</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Planet tabs -->
+            <div class="planet-tab" id="planet-mercius" style="display: block">
+                <h1>Mercius</h1>
+                <h4>A very, very, very cold planet.</h4>
+            </div>
+            <div class="planet-tab" id="planet-coyto">
+                <h1>Coyto</h1>
+                <h4>The most mediocre planet every seen.</h4>
+            </div>
+            <div class="planet-tab" id="planet-poloki">
+                <h1>Poloki</h1>
+                <h4>This planet has great trees.</h4>
+                <div>
+                    <ul class="buttonBar">
+                        <li>
+                            <button class="small-button cost-button" onclick="newTreeFarm()" cost="500">Build New Tree Farm - 500$</button>
+                        </li>
+                        <li>
+                            <button class="small-button cost-button" onclick="newWoodShop()" cost="1500">Build a Woodshop - 1500$</button>
+                        </li>
+                    </ul>
+                </div>
+                <div style="display:inline-flex;">
+                    <div class="info-box">
+                        <h1>
+                            Tree Farm
+                        </h1>
+                        <h4>
+                            Description: Produces wood
+                            <br/> Cost: 500$
+                            <br/> Income: 25$
+                            <br/>
+                        </h4>
+                    </div>
+
+                    <div class="info-box">
+                        <h1>
+                            Woodshop
+                        </h1>
+                        <h4>
+                            Description: Crafts wood products
+                            <br/> Cost: 1500$
+                            <br/> Income: 250$
+                            <br/>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
 </body>
 
 </html>

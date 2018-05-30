@@ -1,0 +1,40 @@
+.navbar ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgb(163, 163, 163);
+    height: 70px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px 5px;
+    position:fixed;
+    top:0;
+}
+
+.navbar li{
+    height: 70px;
+    margin: 0px 0px;
+    float: left;
+}
+
+.navbar li a {
+    height: 60px;
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-style: bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #f44336;
+}
+
+.navbar a:hover {
+    background-color: rgb(185, 27, 27);
+}
+
+.navbar #statsText{
+    background-color: rgb(163, 163, 163);
+    float:right;
+    color:black;
+    padding-right: 15px;
+}

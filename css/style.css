@@ -1,0 +1,78 @@
+body{
+    background: black;
+    margin-left: 0px;
+    margin-top:100px;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+    color:white;
+}
+
+button{
+    background-color: #f44336;
+    border: white;
+    color:white;
+}
+
+button:disabled{
+    background-color: #7e170f;
+}
+
+.main{
+    margin: 3%;
+}
+
+.buttonBar{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    height: 50px;
+}
+
+.buttonBar li{
+    margin: 0px 0px;
+    height: 50px;
+    float: left;
+}
+
+.buttonBar button{
+    display: block;
+    padding: 0px 20px;
+    line-height: 0;
+    font-size: 20px;
+    height: 45px;
+}
+
+.buttonBar button.small-button{
+    font-size: 15px;
+    height: 25px;
+}
+
+
+button:hover:not(:disabled) {
+    background-color: rgb(185, 27, 27);
+}
+
+.info-box{
+    background-color: #851a13;
+    border: rgb(100, 100, 100);
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    width: 250px;
+    margin:5px;
+}
+
+.info-box h1{
+    text-align: center;
+}
+
+#financeList h3{
+    font-size: 25px;
+}
+
+.planet-tab{
+    background-color:rgb(54, 53, 53);
+    padding: 15px;
+    display: none;
+}
