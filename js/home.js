@@ -31,7 +31,7 @@ function openPlanetTab(name){
     document.getElementById(name).style.display = "block";
 }
 
-function newWoodShop(){
+function newWoodRefinery(){
     if(money < 1500)
         return;
 
