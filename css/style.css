@@ -54,7 +54,7 @@ button:hover:not(:disabled) {
 }
 
 .info-box{
-    background-color: #851a13;
+    background-color: #330000;
     border: rgb(100, 100, 100);
     border-width: 1px;
     border-style: solid;

@@ -30,8 +30,8 @@
                 <p id="money" style="color:black;">
                     Money: $0
                 </p>
-                <p id="moneyPerQuarter" style="color:black;">
-                    Money Per Quarter: $100
+                <p id="wood" style="color:black;">
+                    Wood: 0
                 </p>
             </li>
         </ul>
@@ -65,10 +65,10 @@
             <div>
                 <ul class="buttonBar">
                     <li>
-                        <button onclick="openPlanetTab('planet-mercius')">Mercius</button>
+                        <button onclick="openPlanetTab('planet-coyto')">Coyto</button>
                     </li>
                     <li>
-                        <button onclick="openPlanetTab('planet-coyto')">Coyto</button>
+                        <button onclick="openPlanetTab('planet-mercius')">Mercius</button>
                     </li>
                     <li>
                         <button onclick="openPlanetTab('planet-poloki')">Poloki</button>
@@ -77,54 +77,81 @@
             </div>
 
             <!-- Planet tabs -->
-            <div class="planet-tab" id="planet-mercius" style="display: block">
-                <h1>Mercius</h1>
-                <h4>A very, very, very cold planet.</h4>
-            </div>
-            <div class="planet-tab" id="planet-coyto">
+            <div class="planet-tab" id="planet-coyto" style="display: block">
                 <h1>Coyto</h1>
-                <h4>The most mediocre planet every seen.</h4>
-            </div>
-            <div class="planet-tab" id="planet-poloki">
-                <h1>Poloki</h1>
-                <h4>This planet has great trees.</h4>
-                <div>
-                    <ul class="buttonBar">
-                        <li>
-                            <button class="small-button cost-button" onclick="newTreeFarm()" cost="500">Build New Tree Farm - 500$</button>
-                        </li>
-                        <li>
-                        <button class="small-button cost-button" onclick="newWoodRefinery()" cost="1500">Build a Wood Refinery - 1500$</button>
-                        </li>
-                    </ul>
-                </div>
-                <div style="display:inline-flex;">
-                    <div class="info-box">
-                        <h1>
-                            Tree Farm
-                        </h1>
-                        <h4>
-                            Description: Produces wood
-                            <br/> Cost: 500$
-                            <br/> Produces: 25 wood
-                            <br/>
-                        </h4>
-                    </div>
+                <h4>The is home base</h4>
 
-                    <div class="info-box">
-                        <h1>
-                            Wood Refinery
-                        </h1>
-                        <h4>
-                            Description: Creates charcoal
-                            <br/> Cost: $15,000
-                            <br/> Produces: 2.5 charcoal
-                            <br/>
-                        </h4>
+                <div class="info-box" style="width:430px">
+                    <h1>
+                        Wood
+                    </h1>
+
+                    <h2 style="margin-bottom: 25px">Current Price: 25$</h2>
+
+                    <div>
+                        <ul class="buttonBar" style="margin-bottom: 50px;">
+                            <li>
+                                <button class="cost-button-wood" cost="1" onclick="sellWood(1)">See 1</button>
+                            </li>
+                            <li>
+                                <button class="cost-button-wood" cost="10" onclick="sellWood(10)">Sell 10</button>
+                            </li>
+                            <li>
+                                <button class="cost-button-wood" cost="100" onclick="sellWood(100)">Sell 100</button>
+                            </li>
+                            <li>
+                                <button onclick="sellWood(wood)">Sell All</button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="planet-tab" id="planet-mercius">
+            <h1>Mercius</h1>
+            <h4>A very, very, very cold planet.</h4>
+        </div>
+        <div class="planet-tab" id="planet-poloki">
+            <h1>Poloki</h1>
+            <h4>This planet has great trees.</h4>
+            <div>
+                <ul class="buttonBar">
+                    <li>
+                        <button class="small-button cost-button-money" onclick="newTreeFarm()" cost="500">Build New Tree Farm - 500$</button>
+                    </li>
+                    <li>
+                        <button class="small-button cost-button-money" onclick="newWoodRefinery()" cost="1500">Build a Wood Refinery - 1500$</button>
+                    </li>
+                </ul>
+            </div>
+            <div style="display:inline-flex;">
+                <div class="info-box">
+                    <h1>
+                        Tree Farm
+                    </h1>
+                    <h4>
+                        Description: Produces wood
+                        <br/> Cost: 500$
+                        <br/> Produces: 25 wood
+                        <br/>
+                    </h4>
+                </div>
+
+                <div class="info-box">
+                    <h1>
+                        Wood Refinery
+                    </h1>
+                    <h4>
+                        Description: Creates charcoal
+                        <br/> Cost: $15,000
+                        <br/> Produces: 2.5 charcoal
+                        <br/>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </div>
     </div>

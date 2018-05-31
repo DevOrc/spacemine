@@ -1,25 +1,29 @@
-function init(){
+function init() {
     console.log("Javascript initialized!");
 
-    updateCostButtons();
-    setInterval(gotoNextQuarter, 5000);
+    setMoney(500);
 }
 
-function updateCostButtons(){
+function updateCostButtons() {
+    updateCostButtonGroup("cost-button-money", money);
+    updateCostButtonGroup("cost-button-wood", wood);
+}
+
+function updateCostButtonGroup(className, value) {
     //Close all of the planet tabs
-    buttons = document.getElementsByClassName("cost-button");
+    buttons = document.getElementsByClassName(className);
     for (i = 0; i < buttons.length; i++) {
         var button = buttons[i];
 
-        if(button.getAttribute("cost") > money){
+        if (button.getAttribute("cost") > value) {
             button.disabled = true;
-        }else{
+        } else {
             button.disabled = false;
         }
     }
 }
 
-function openPlanetTab(name){
+function openPlanetTab(name) {
     console.log("Opening planet tab: " + name);
 
     //Close all of the planet tabs
@@ -31,46 +35,58 @@ function openPlanetTab(name){
     document.getElementById(name).style.display = "block";
 }
 
-function newWoodRefinery(){
-    if(money < 1500)
+function newWoodRefinery() {
+    if (money < 1500)
         return;
 
     loseMoney(1500);
-    addMoneyPerQuarter(250);
 }
 
-function newTreeFarm(){
-    if(money < 500)
+function newTreeFarm() {
+    if (money < 500)
         return;
-    
+
     loseMoney(500);
-    addMoneyPerQuarter(25);
+    setInterval(function () { gainWood(25) }, 1000);
 }
 
-// Money
+function sellWood(amount){
+    if(amount > wood)
+        amount = wood;
 
-var money = 0;
-var moneyPerQuarter = 100;
+    gainMoney(wood * 25);
+    loseWood(amount);
+}
 
-function gainMoney(amount){
+// Resources
+
+var wood = 0;
+var money = 500;
+
+function gainWood(amount) {
+    setWood(wood + amount)
+}
+
+function loseWood(amount) {
+    setWood(wood - amount)
+}
+
+function setWood(amount) {
+    wood = amount;
+    document.getElementById("wood").innerHTML = "Wood: " + wood;
+    updateCostButtons();
+}
+
+
+function gainMoney(amount) {
     setMoney(money + amount)
 }
 
-function addMoneyPerQuarter(amount){
-    moneyPerQuarter += amount
-
-    document.getElementById("moneyPerQuarter").innerHTML = "Money Per Quarter: $" + moneyPerQuarter;
-}
-
-function gotoNextQuarter(){
-    gainMoney(moneyPerQuarter);
-}
-
-function loseMoney(amount){
+function loseMoney(amount) {
     setMoney(money - amount)
 }
 
-function setMoney(amount){
+function setMoney(amount) {
     money = amount;
     updateCostButtons();
     document.getElementById("money").innerHTML = "Money: $" + money;
