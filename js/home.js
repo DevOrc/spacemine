@@ -28,6 +28,6 @@ function newTreeFarm() {
         return;
 
     loseMoney(500);
-    setInterval(function () { gainWood(25) }, 1000);
+    setInterval(function () { gainWood(1) }, 1000);
 }
 
